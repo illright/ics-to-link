@@ -30,7 +30,7 @@
 	}
 </script>
 
-<div class="flex min-h-screen flex-col text-gray-900 dark:bg-gray-900 dark:text-gray-50">
+<div class="flex min-h-dvh flex-col text-gray-900 dark:bg-gray-900 dark:text-gray-50">
 	<div class="flex flex-1 flex-col items-center justify-center pt-10">
 		<h1 class="p-3 text-center text-3xl font-bold">Convert your .ics file into calendar links</h1>
 		<label

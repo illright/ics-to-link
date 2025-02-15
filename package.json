@@ -2,7 +2,7 @@
 	"name": "ics-to-link",
 	"description": "An application to generate calendar links from ICS files",
 	"private": true,
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"license": "ISC",
 	"type": "module",
 	"scripts": {
