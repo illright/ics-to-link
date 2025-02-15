@@ -120,26 +120,28 @@
 					Add to AOL
 				</a>
 			</div>
-			<details class="relative mt-4">
-				<summary class="p-2">Raw event JSON</summary>
-				<button
-					class="absolute right-1 flex -translate-y-full items-center gap-2 rounded-sm bg-gray-200 p-2 px-3 active:bg-gray-300 dark:bg-gray-700 dark:active:bg-gray-600"
-					onclick={(event) => {
-						navigator.clipboard.writeText(JSON.stringify(event, null, 2));
-						event.currentTarget.textContent = 'Copied!';
-						setTimeout(() => {
-							(event.target as HTMLButtonElement).textContent = 'Copy';
-						}, 1000);
-					}}
-				>
-					Copy
-				</button>
-				<pre class="box-border max-h-80 max-w-screen overflow-auto p-2">{JSON.stringify(
-						event,
-						null,
-						2
-					)}</pre>
-			</details>
+			{#if import.meta.env.DEV}
+				<details class="relative mt-4">
+					<summary class="p-2">Raw event JSON</summary>
+					<button
+						class="absolute right-1 flex -translate-y-full items-center gap-2 rounded-sm bg-gray-200 p-2 px-3 active:bg-gray-300 dark:bg-gray-700 dark:active:bg-gray-600"
+						onclick={(event) => {
+							navigator.clipboard.writeText(JSON.stringify(event, null, 2));
+							event.currentTarget.textContent = 'Copied!';
+							setTimeout(() => {
+								(event.target as HTMLButtonElement).textContent = 'Copy';
+							}, 1000);
+						}}
+					>
+						Copy
+					</button>
+					<pre class="box-border max-h-80 max-w-screen overflow-auto p-2">{JSON.stringify(
+							event,
+							null,
+							2
+						)}</pre>
+				</details>
+			{/if}
 		{/if}
 	</div>
 
